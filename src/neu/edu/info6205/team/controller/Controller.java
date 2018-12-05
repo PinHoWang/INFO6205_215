@@ -61,7 +61,7 @@ public class Controller {
 		
 		for(int i = 0; i < way.length; i++) {
 			for(int j = 0; j < way[i].length; j++) {
-				System.out.print(way[i][j] + " ");
+				System.out.print(way[j][i] + " ");
 			}
 			System.out.println();
 		}

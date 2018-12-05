@@ -1,6 +1,5 @@
 package neu.edu.info6205.team.objects;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Individual extends AbstractIndividual{

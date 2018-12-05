@@ -1,9 +1,6 @@
 package neu.edu.info6205.team.objects;
 
 public abstract class AbstractPopulation {
-	private AbstractIndividual population[];
-	private double populationFitness;
-
 	public abstract AbstractIndividual[] getIndividuals();
 	public abstract AbstractIndividual getFittest(int i);
 	public abstract void setPopulationFitness(double fitness);

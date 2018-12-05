@@ -1,10 +1,12 @@
-package chapter3;
+package neu.edu.info6205.team.objects;
 
+import java.util.ArrayList;
+import java.util.List;
 
 public class Individual extends AbstractIndividual{
 	private int[] chromosome;
 	private double fitness = -1;
-
+	private List<int[]> route;
 
 	public Individual(int[] chromosome) {
 		this.chromosome = chromosome;
@@ -50,6 +52,13 @@ public class Individual extends AbstractIndividual{
 		return this.fitness;
 	}
 	
+	public void setRoute(List<int[]> route) {
+		this.route = route;
+	}
+	
+	public List<int[]> getRoute() {
+		return route;
+	}
 
 	public String toString() {
 		String output = "";

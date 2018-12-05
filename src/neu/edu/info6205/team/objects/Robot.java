@@ -11,10 +11,10 @@ public class Robot {
     int moves;
     private int sensorVal;
     private final int sensorActions[];
-    private Maze m;
+    private AbstractMaze m;
     private ArrayList<int[]> way;
     
-    public Robot(int[] actions, Maze m, int maxMove) {
+    public Robot(int[] actions, AbstractMaze m, int maxMoves) {
     	this.sensorActions = this.calcSensor(actions);
         this.m = m;
         int startPos[] = this.m.getStartPosition();
@@ -53,7 +53,6 @@ public class Robot {
     }
     
     private int[] calcSensor(int[] sensorActions){
-        // How many actions are there?
         int numActions = (int) sensorActions.length / 2;
         int actions[] = new int[numActions];
         
@@ -70,10 +69,10 @@ public class Robot {
             }
             
             // Add to sensor-action map
-            sensorActions[i] = action;
+            actions[i] = action;
         }
       
-        return sensorActions;
+        return actions;
     }
     
     public void nextAction() {

@@ -1,17 +1,13 @@
 package neu.edu.info6205.team.objects;
 
 public abstract class AbstractGeneticAlgorithm {
-	private int populationSize;
-	private double mutationRate;
-	private double crossoverRate;
-	private int elitismCount;
 	
-	public abstract AbstractPopulation initPopulation(int chromosomeLength);
-	public abstract double calcFitness(AbstractIndividual individual);
-	public abstract void evalPopulation(AbstractPopulation population);
-	public abstract boolean isTerminationConditionMet(AbstractPopulation population);
+	public abstract AbstractPopulation firstPopulation(int chromosomeLength);
+	public abstract double calcFitness(AbstractIndividual individual, AbstractMaze maze);
+	public abstract void calcPopulation(AbstractPopulation population, AbstractMaze maze);
+	public abstract boolean endConditionMet(int x, int y);
 	public abstract AbstractIndividual selectParent(AbstractPopulation population);
-	public abstract AbstractPopulation crossoverPopulation(AbstractPopulation population);
-	public abstract AbstractPopulation mutatePopulation(AbstractPopulation population);
+	public abstract AbstractPopulation crossover(AbstractPopulation population);
+	public abstract AbstractPopulation mutate(AbstractPopulation population);
 	
 }

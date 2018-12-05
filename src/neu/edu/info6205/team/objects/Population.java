@@ -1,4 +1,4 @@
-package chapter3;
+package neu.edu.info6205.team.objects;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -6,7 +6,7 @@ import java.util.Random;
 
 
 public class Population extends AbstractPopulation{
-	private Individual population[];
+	private AbstractIndividual population[];
 	private double populationFitness = -1;
 
 
@@ -24,7 +24,7 @@ public class Population extends AbstractPopulation{
 		for (int individualCount = 0; individualCount < populationSize; individualCount++) {
 			// Create an individual, initializing its chromosome to the given
 			// length
-			Individual individual = new Individual(chromosomeLength);
+			AbstractIndividual individual = new Individual(chromosomeLength);
 			// Add individual to population
 			this.population[individualCount] = individual;
 		}
@@ -34,11 +34,11 @@ public class Population extends AbstractPopulation{
 		return this.population;
 	}
 
-	public Individual getFittest(int offset) {
+	public AbstractIndividual getFittest(int offset) {
 		// Order population by fitness
-		Arrays.sort(this.population, new Comparator<Individual>() {
+		Arrays.sort(this.population, new Comparator<AbstractIndividual>() {
 			@Override
-			public int compare(Individual o1, Individual o2) {
+			public int compare(AbstractIndividual o1, AbstractIndividual o2) {
 				if (o1.getFitness() > o2.getFitness()) {
 					return -1;
 				} else if (o1.getFitness() < o2.getFitness()) {
@@ -70,8 +70,9 @@ public class Population extends AbstractPopulation{
 		return this.population.length;
 	}
 
-	public AbstractIndividual setIndividual(int offset, Individual individual) {
-		return population[offset] = individual;
+	@Override
+	public AbstractIndividual setIndividual(int i, AbstractIndividual individual) {
+		return population[i] = individual;
 	}
 
 	public AbstractIndividual getIndividual(int offset) {
@@ -82,19 +83,10 @@ public class Population extends AbstractPopulation{
 		Random rnd = new Random();
 		for (int i = population.length - 1; i > 0; i--) {
 			int index = rnd.nextInt(i + 1);
-			Individual a = population[index];
+			AbstractIndividual a = population[index];
 			population[index] = population[i];
 			population[i] = a;
 		}
 	}
-
-	@Override
-	public AbstractIndividual setIndividual(int i, AbstractIndividual individual) {
-		return null;
-	}
-
-
-
-
 
 }

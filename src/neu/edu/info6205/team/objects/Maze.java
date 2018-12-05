@@ -25,8 +25,8 @@ public class Maze extends AbstractMaze {
 			for (int j = 0; j < this.mapArray[i].length; j++) {
 				// 2 is the type for start position
 				if (this.mapArray[i][j] == 2) {
-					this.startPosition = new int[] { i, j };
-					return new int[] { i, j };
+					this.startPosition = new int[] { j, i };
+					return new int[] { j, i };
 				}
 			}
 		}

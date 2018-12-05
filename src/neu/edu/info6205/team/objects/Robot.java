@@ -107,7 +107,6 @@ public class Robot {
                 }
             }
             
-            // We can't move here
             if (this.m.isWall(this.xPos, this.yPos) == true) {
                 this.xPos = currentX;
                 this.yPos = currentY;

@@ -56,7 +56,7 @@ public class Controller {
 		int[][] way = new int[maxX+1][maxY+1];
 		for(int[] pair : r) {
 			way[pair[0]][pair[1]] = 1;
-//			System.out.println(pair[0] + " " + pair[1]);
+			System.out.println(pair[0] + " " + pair[1]);
 		}
 		
 		for(int i = 0; i < way.length; i++) {

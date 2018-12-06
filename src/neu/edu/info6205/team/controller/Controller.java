@@ -52,6 +52,7 @@ public class Controller {
 		}
 		
 		System.out.println();
+		System.out.println("Route of the fittest solution: ");
 		for(int i = 0; i < way.length; i++) {
 			for(int j = 0; j < way[i].length; j++) {
 				System.out.print(way[j][i] + " ");

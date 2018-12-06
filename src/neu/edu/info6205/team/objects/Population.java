@@ -52,12 +52,7 @@ public class Population extends AbstractPopulation{
 		return this.population[offset];
 	}
 
-	/**
-	 * Set population's group fitness
-	 * 
-	 * @param fitness
-	 *            The population's total fitness
-	 */
+	
 	public void setPopulationFitness(double fitness) {
 		this.populationFitness = fitness;
 	}

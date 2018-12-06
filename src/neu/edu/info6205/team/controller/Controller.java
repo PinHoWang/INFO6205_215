@@ -15,7 +15,7 @@ public class Controller {
 	
 	public static void demo() {
 
-		AbstractMaze m = MazeGenerator.readMaze("Maze1");
+		AbstractMaze m = MazeGenerator.readMaze("Maze4");
 		
 		GeneticAlgorithm gna = new GeneticAlgorithm(200, 0.05, 0.9, 2, 10);
 		AbstractPopulation pop = gna.firstPopulation(128);

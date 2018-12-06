@@ -66,12 +66,18 @@ public class Maze extends AbstractMaze {
 		// Loop over route and score each move
 		for (Object eachStep : way) {
 			int step[] = (int[]) eachStep;
-			if (this.mapArray[step[1]][step[0]] == 3 && visited[step[1]][step[0]] == false) {
+			if ((this.mapArray[step[1]][step[0]] == 3 && visited[step[1]][step[0]] == false )||this.mapArray[step[1]][step[0]] == 4) {
 				// Increase score for correct move
 				count++;
 				// Remove reward
 				visited[step[1]][step[0]] = true;
 			}
+//			else if (this.mapArray[step[1]][step[0]] == 0 ||this.mapArray[step[1]][step[0]] == 1) {
+//				// Increase score for correct move
+//				count--;
+//				// Remove reward
+//				visited[step[1]][step[0]] = true;
+//			}
 		}
 
 		return count;

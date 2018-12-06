@@ -28,8 +28,8 @@ class TestMaze {
 	@Test
 	void testStartPosition() {
 		AbstractMaze maze = genMaze();
-		assertEquals(0, maze.getStartPosition()[0]);
-		assertEquals(8, maze.getStartPosition()[1]);
+		assertEquals(8, maze.getStartPosition()[0]);
+		assertEquals(0, maze.getStartPosition()[1]);
 	}
 	
 	@Test

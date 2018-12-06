@@ -12,8 +12,7 @@ import neu.edu.info6205.team.objects.Maze;
 public class MazeGenerator {
 	
 	public static AbstractMaze readMaze(String mazeName) {
-		int[][] m = parse("C:\\Users\\abc87\\git\\INFO6205_215\\src\\Maze\\" + mazeName + ".txt");
-//		int[][] m = parse("Maze/" + mazeName + ".txt");
+		int[][] m = parse("Maze/" + mazeName + ".txt");
 		
 		AbstractMaze maze = new Maze(m);
 		
